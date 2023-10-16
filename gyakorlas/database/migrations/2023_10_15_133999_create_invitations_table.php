@@ -15,16 +15,27 @@ return new class extends Migration
         Schema::create('invitations', function (Blueprint $table) {
             $table->id("invitation_id");
             $table->String("appeared");
-            $table->id("event_id");
-            $table->id("user_id");
             $table->foreignId('event_id')->references('event_id')->on('events');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
 
         invitation::create([
             'appeared' => 'dfgdfgd',
-            'event_id' => '2002.06.02',
-            'user_id' => '1'
+            'event_id' => 1,
+            'user_id' => 1
+        ]);
+
+        invitation::create([
+            'appeared' => 'dfgdfdgd',
+            'event_id' => 2,
+            'user_id' => 2
+        ]);
+
+        invitation::create([
+            'appeared' => 'dfgdfdgd',
+            'event_id' => 3,
+            'user_id' => 3
         ]);
 
 

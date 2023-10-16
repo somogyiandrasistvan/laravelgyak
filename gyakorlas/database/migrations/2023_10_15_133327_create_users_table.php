@@ -17,7 +17,6 @@ return new class extends Migration
             $table->String("name");
             $table->String("email");
             $table->integer("sex");
-            $table->foreignId("id")->references("user_id")->on("invitation");
             $table->timestamps();
         });
 

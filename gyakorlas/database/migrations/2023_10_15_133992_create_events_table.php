@@ -16,7 +16,6 @@ return new class extends Migration
             $table->id("event_id");
             $table->date("date");
             $table->string("location");
-            $table->id("org_id");
             $table->foreignId('org_id')->references('org_id')->on('organisators');
             $table->timestamps();
         });

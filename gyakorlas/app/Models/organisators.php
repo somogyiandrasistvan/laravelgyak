@@ -9,7 +9,7 @@ class organisators extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = "org_id";
+    protected $primaryKey = 'org_id';
 
     protected $fillable = [
         'name',
